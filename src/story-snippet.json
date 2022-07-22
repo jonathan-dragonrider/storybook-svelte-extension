@@ -1,0 +1,13 @@
+{
+	"Create story": {
+		"prefix": "story",
+		"body": [
+			"export const ${1:Story} = Template.bind({});",
+			"$1.args = {",
+      "  $2",
+      "}",
+      "$0"
+		],
+		"description": "Create Storybook story"
+	}
+}
