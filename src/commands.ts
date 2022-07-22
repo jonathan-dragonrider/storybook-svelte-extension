@@ -1,14 +1,15 @@
 import { TextEncoder } from 'util';
 import * as vscode from 'vscode';
+import * as path from 'path';
 
 export async function createStories() {
   // Get path of active document, and create path for new file
   const filePath = vscode.window.activeTextEditor?.document.fileName as string
-  const fileName = filePath.split('/').at(-1) as string
+  const fileName = path.basename(filePath)
   const dir = filePath.replace(fileName, '')
   const nameWithoutExtension = fileName.split('.').at(0)
   
-  const newFileName = `${dir}${nameWithoutExtension}.stories.js`
+  const newFileName = `${dir}${nameWithoutExtension}.stories.svelte`
   const newFileURI = vscode.Uri.file(newFileName)
   const encoder = new TextEncoder()
   const view = encoder.encode('')
