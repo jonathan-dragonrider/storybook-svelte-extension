@@ -22,11 +22,11 @@
 		],
 		"snippets": [
 			{
-				"language": "javascript",
+				"language": "svelte",
 				"path": "./src/init-snippet.json"
 			},
 			{
-				"language": "javascript",
+				"language": "svelte",
 				"path": "./src/story-snippet.json"
 			}
 		]

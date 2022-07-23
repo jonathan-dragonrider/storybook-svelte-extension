@@ -3,14 +3,13 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 
 export async function createStories() {
-  // Get path of active document, and create path for new file
-  const filePath = vscode.window.activeTextEditor?.document.fileName as string
-  const fileName = path.basename(filePath)
-  const dir = filePath.replace(fileName, '')
-  const nameWithoutExtension = fileName.split('.').at(0)
-  
-  const newFileName = `${dir}${nameWithoutExtension}.stories.svelte`
-  const newFileURI = vscode.Uri.file(newFileName)
+  // .../src/lib/example.svelte -> .../src/stories/example.stories.svelte
+  const activePath = vscode.window.activeTextEditor?.document.fileName as string // .../src/lib/example.svelte
+  const nameNoExt = path.basename(activePath, '.svelte') // example
+  const dirName = path.dirname(activePath) // .../src/lib
+
+  const newFilePath = `${dirName.split('/lib')[0]}/stories/${nameNoExt}.stories.svelte`
+  const newFileURI = vscode.Uri.file(newFilePath)
   const encoder = new TextEncoder()
   const view = encoder.encode('')
 
@@ -18,6 +17,6 @@ export async function createStories() {
   await vscode.workspace.fs.writeFile(newFileURI, view) 
   await vscode.window.showTextDocument(newFileURI)
   await vscode.commands.executeCommand("editor.action.insertSnippet", {
-    name: "Initialize stories file",
+    name: "Initialize .stories.svelte file",
   });
 } 

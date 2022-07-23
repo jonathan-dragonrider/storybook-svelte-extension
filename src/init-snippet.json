@@ -1,5 +1,5 @@
 {
-	"Initialize stories file": {
+	"Initialize .stories.svelte file": {
 		"prefix": "story-init",
 		"body": [
 			"import ${TM_FILENAME/(.*).stories.jsx?/$1/} from './${TM_FILENAME/(.*).stories.jsx?/$1/}.svelte';",
