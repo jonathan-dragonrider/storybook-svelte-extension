@@ -1,7 +1,12 @@
 {
-  "name": "storybook-svelte",
-	"displayName": "Storybook Svelte",
-	"description": "Scaffold stories for Svelte components",
+  "name": "svelte-storybook",
+	"displayName": "Svelte Storybook Helper",
+	"description": "A VS Code extension for blazing fast Svelte-Storybook component library development",
+	"icon": "./src/icon.png",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/jonathan-dragonrider/svelte-storybook-extension"
+  },
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.69.0"
@@ -10,13 +15,13 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:storybook-svelte.create-stories"
+        "onCommand:svelte-storybook.create-stories"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "storybook-svelte.create-stories",
+				"command": "svelte-storybook.create-stories",
 				"title": "Create Stories"
 			}
 		],
