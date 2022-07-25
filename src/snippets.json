@@ -1,0 +1,39 @@
+{
+  "Initialize .stories.svelte file": {
+		"prefix": "story-init",
+		"body": [
+      "<script>",
+      "\timport { Meta, Template, Story } from \"@storybook/addon-svelte-csf\";",
+			"\timport ${TM_FILENAME/(.*).stories.svelte?/$1/} from \"../lib/${TM_FILENAME/(.*).stories.svelte?/$1/}.svelte\";",
+      "</script>",
+			"",
+      "<Meta title=\"${1:Atoms}/${TM_FILENAME/(.*).stories.svelte?/$1/}\" component={${TM_FILENAME/(.*).stories.svelte?/$1/}}/>",
+      "",
+      "<Template let:args>",
+      "\t<${TM_FILENAME/(.*).stories.svelte?/$1/} {...args}/>",
+      "</Template>",
+      "",
+      "<Story",
+      "\tname=\"$2\"",
+      "\targs={{",
+      "\t\t$3",
+      "\t}}",
+      "/>",
+			"$0"
+		],
+		"description": "Initialize Storybook stories file"
+	},
+  "Create story": {
+    "prefix": "story",
+    "body": [
+      "<Story",
+      "\tname=\"$2\"",
+      "\targs={{",
+      "\t\t$3",
+      "\t}}",
+      "/>",
+			"$0"
+    ],
+    "description": "Create a Storybook story"
+  }
+}

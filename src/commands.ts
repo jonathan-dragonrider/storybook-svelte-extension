@@ -6,9 +6,8 @@ export async function createStories() {
   // .../src/lib/example.svelte -> .../src/stories/example.stories.svelte
   const activePath = vscode.window.activeTextEditor?.document.fileName as string // .../src/lib/example.svelte
   const nameNoExt = path.basename(activePath, '.svelte') // example
-  const dirName = path.dirname(activePath) // .../src/lib
+  const newFilePath = path.join(activePath, '..', '..', 'stories', `${nameNoExt}.stories.svelte`)
 
-  const newFilePath = `${dirName.split('/lib')[0]}/stories/${nameNoExt}.stories.svelte`
   const newFileURI = vscode.Uri.file(newFilePath)
   const encoder = new TextEncoder()
   const view = encoder.encode('')

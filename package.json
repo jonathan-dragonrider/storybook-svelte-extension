@@ -23,11 +23,7 @@
 		"snippets": [
 			{
 				"language": "svelte",
-				"path": "./src/init-snippet.json"
-			},
-			{
-				"language": "svelte",
-				"path": "./src/story-snippet.json"
+				"path": "./src/snippets.json"
 			}
 		]
 	},
