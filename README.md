@@ -1,4 +1,4 @@
-# SvelteKit-Storybook Helper
+# Svelte-Storybook Helper
 This extension was created to make writing component libraries with SvelteKit and Storybook much faster by automating the repetitive task of creating new files and typing in boilerplate code. This extension assumes your SvelteKit-Storybook project has a lib directory under src where all your components live, and a stories directory under src where all your stories live so that the Create Stories command works correctly. It also assumes that you are using the Storybook addon @storybook/addon-svelte-csf in order for the snippets to be meaningful.
 
 ## Features
