@@ -16,6 +16,6 @@ export async function createStories() {
   await vscode.workspace.fs.writeFile(newFileURI, view) 
   await vscode.window.showTextDocument(newFileURI)
   await vscode.commands.executeCommand("editor.action.insertSnippet", {
-    name: "Initialize .stories.svelte file",
+    name: "Initialize .stories.svelte File",
   });
 } 

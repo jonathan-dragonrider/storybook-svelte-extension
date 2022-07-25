@@ -1,5 +1,5 @@
 {
-  "Initialize .stories.svelte file": {
+  "Initialize .stories.svelte File": {
 		"prefix": "story-init",
 		"body": [
       "<script>",
@@ -23,7 +23,7 @@
 		],
 		"description": "Initialize Storybook stories file"
 	},
-  "Create story": {
+  "Create Story": {
     "prefix": "story",
     "body": [
       "<Story",
