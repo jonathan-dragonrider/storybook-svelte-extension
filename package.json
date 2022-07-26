@@ -2,7 +2,7 @@
   "name": "svelte-storybook-extension",
 	"displayName": "Svelte Storybook Helper",
 	"description": "A VS Code extension for blazing fast Svelte-Storybook component library development",
-	"icon": "src/icon.png",
+	"icon": "public/icon.png",
 	"repository": {
     "type": "git",
     "url": "https://github.com/jonathan-dragonrider/svelte-storybook-extension"
@@ -28,7 +28,7 @@
 		"snippets": [
 			{
 				"language": "svelte",
-				"path": "src/snippets.json"
+				"path": "public/snippets.json"
 			}
 		]
 	},
